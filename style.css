@@ -1,0 +1,247 @@
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --main-color: #0ef;
+    --white-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--white-color);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.contact-container .contact-box:first-child {
+    align-self: center;
+}
+
+.contact-box h2 {
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+
+.contact-box .desc {
+    font-size: 1.6rem;
+    margin: 1.5rem 0 2.5rem;
+}
+
+.contact-box .contact-detail {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.contact-detail i {
+    display: inline-flex;
+    background: var(--second-bg-color);
+    color: var(--main-color);
+    font-size: 3rem;
+    padding: 1.2rem;
+    border-radius: 0.6rem;
+    margin-right: 1.5rem;
+}
+
+.contact-detail .detail p:first-child {
+    color: var(--main-color);
+    font-size: 1.4rem;
+}
+
+.contact-detail .detail p:last-child {
+    font-size: 1.6rem;
+}
+
+.contact-box form {
+    background: var(--second-bg-color);
+    padding: 2.5rem 3.5rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.contact-box .hadding {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-box .hadding span {
+    color: var(--main-color);
+}
+
+.contact-box .fild-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.contact-box .fild-box input,
+.contact-box .fild-box textarea {
+    padding: 1.5rem;
+    background: var(--bg-color);
+    border: 0.15rem solid var(--bg-color);
+    border-radius: 0.6rem;
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
+
+.contact-box .fild-box textarea {
+    grid-column: 1 / -1;
+    height: 26rem;
+    resize: none;
+}
+
+.contact-box .fild-box input:focus,
+.contact-box .fild-box textarea:focus {
+    border-color: var(--white-color);
+    outline: none;
+}
+
+.contact-box .btn {
+    margin-top: 2rem;
+    padding: 1.2rem 3rem;
+    background: var(--main-color);
+    border: none;
+    border-radius: 0.6rem;
+    color: var(--bg-color);
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-box .btn:hover {
+    background: #0cd;
+
+}
+@media (max-width: 1024px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-box h2 {
+        font-size: 3.5rem;
+    }
+
+    .contact-box .hadding {
+        font-size: 2.8rem;
+    }
+
+    .contact-box .desc {
+        font-size: 1.4rem;
+    }
+
+    .contact-detail i {
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
+
+    .contact-detail .detail p:first-child {
+        font-size: 1.2rem;
+    }
+
+    .contact-detail .detail p:last-child {
+        font-size: 1.4rem;
+    }
+
+    .contact-box form {
+        padding: 2rem 2.5rem;
+    }
+
+    .contact-box .fild-box input,
+    .contact-box .fild-box textarea {
+        font-size: 1.4rem;
+        padding: 1.2rem;
+    }
+
+    .contact-box .btn {
+        padding: 1rem 2.5rem;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 0 1.5rem;
+        margin: 3rem auto;
+    }
+
+    .contact-box h2 {
+        font-size: 2.8rem;
+    }
+
+    .contact-box .hadding {
+        font-size: 2.2rem;
+    }
+
+    .contact-box .desc {
+        font-size: 1.2rem;
+    }
+
+    .contact-box .fild-box {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box .fild-box textarea {
+        height: 20rem;
+    }
+
+    .contact-detail i {
+        font-size: 2rem;
+        padding: 0.8rem;
+    }
+
+    .contact-box .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-box h2 {
+        font-size: 2rem;
+    }
+
+    .contact-box .hadding {
+        font-size: 1.8rem;
+    }
+
+    .contact-box .desc {
+        font-size: 1rem;
+    }
+
+    .contact-box form {
+        padding: 1.5rem;
+    }
+
+    .contact-box .fild-box input,
+    .contact-box .fild-box textarea {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .contact-box .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .contact-detail .detail p:first-child {
+        font-size: 1rem;
+    }
+
+    .contact-detail .detail p:last-child {
+        font-size: 1.2rem;
+    }
+}
